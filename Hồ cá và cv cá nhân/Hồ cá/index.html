@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hồ cá</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="controls">
+      <h2>Trình ghép hồ cá</h2>
+      <p>Kéo-thả các ảnh cá vào vị trí mong muốn, chỉnh hiệu ứng rồi nhấn <strong>Lưu ảnh</strong>.</p>
+      <div class="control-row">
+        <label>Độ bóng (shadow)</label>
+        <input id="shadow" type="range" min="0" max="40" value="12">
+      </div>
+      <div class="control-row">
+        <label>Độ mờ (depth blur)</label>
+        <input id="depth" type="range" min="0" max="6" value="0.6" step="0.1">
+      </div>
+      <div class="control-row">
+        <label>Ánh sáng (warmth)</label>
+        <input id="warmth" type="range" min="0" max="1.5" value="1" step="0.05">
+      </div>
+      <div class="buttons">
+        <button id="randomize">Sắp đặt ngẫu nhiên</button>
+        <button id="reset">Đặt lại</button>
+        <button id="export">Lưu ảnh</button>
+      </div>
+      <small>Hình nền: ảnh hồ (tải từ thư mục)</small>
+    </aside>
+
+    <main id="editor">
+      <div id="preview">
+        <img id="bgImage" src="hoca.jpg" alt="Hồ cá nền">
+        <div id="overlay" aria-hidden="false"></div>
+      </div>
+      <div id="assets">
+        <h3>Ảnh (Kéo vào hồ)</h3>
+        <div id="thumbs"></div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
